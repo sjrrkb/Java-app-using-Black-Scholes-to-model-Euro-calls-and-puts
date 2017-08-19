@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="switcherexample.MainMenu">
+   <children>
+      <VBox alignment="CENTER" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Option Price Calculator">
+               <font>
+                  <Font size="50.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Text>
+            <Button mnemonicParsing="false" onAction="#handleGoToB" text="Start" />
+         </children>
+      </VBox>
+      <MenuBar prefWidth="850.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#exitGame" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#aboutMenu" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

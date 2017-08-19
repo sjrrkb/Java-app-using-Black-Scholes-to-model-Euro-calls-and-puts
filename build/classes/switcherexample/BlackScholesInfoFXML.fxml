@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="switcherexample.BlackScholesInfo">
+   <children>
+      <VBox alignment="CENTER" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextArea fx:id="cText" editable="false" maxHeight="400.0" maxWidth="450.0" minHeight="200.0" minWidth="450.0" prefHeight="200.0" prefWidth="450.0" text="       The Black-Scholes forumla calulates prices for European-style options. &#10;The formula and the resulting partial derivatives are heavily used in the &#10;financial industry. The Black-Scholes forumla is not the same as the Black-Scholes&#10;equation which is a partial differentiable equation derived for the Heat Equation.&#10;The Black-Scholes formula takes in 6 parameters and returns the current&#10;price of the option. Both the formula and the equation utilize Geometric&#10;Brownian Motion to model option prices. Note, the only options that can&#10;be modeled by this program are vanilla Calls and Puts but future editions&#10;will involve finite differences (implicit/explicit), Monte Carlo simulations, &#10;and Asian Average Options. " />
+            <Button layoutX="277.0" layoutY="227.0" mnemonicParsing="false" onAction="#handleGoToB" text="Return To Black Scholes Inputs">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+      <MenuBar prefWidth="850.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#exitGame" text="Close" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleGoToA" text="Return Home" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#aboutMenu" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

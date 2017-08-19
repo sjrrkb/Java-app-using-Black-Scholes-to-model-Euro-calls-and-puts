@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="switcherexample.BlackScholesCalculator">
+   <children>
+      <VBox alignment="CENTER" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Black Scholes Inputs">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="stock" maxWidth="150.0" minWidth="67.0" onKeyPressed="#handleKeyInputStock" prefHeight="51.0" prefWidth="70.0" promptText="Stock" />
+                        <Button mnemonicParsing="false" onAction="#stockInfo" text="S">
+                           <VBox.margin>
+                              <Insets left="32.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="strike" maxWidth="150.0" minWidth="67.0" prefHeight="51.0" prefWidth="70.0" promptText="Strike" />
+                        <Button mnemonicParsing="false" onAction="#strikeInfo" text="K">
+                           <VBox.margin>
+                              <Insets left="32.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="volatility" maxWidth="150.0" minWidth="67.0" onKeyPressed="#handleKeyInputVolatility" prefHeight="51.0" prefWidth="70.0" promptText="\%Volatility" />
+                        <Button mnemonicParsing="false" onAction="#volatilityInfo" text="σ">
+                           <VBox.margin>
+                              <Insets left="32.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="interest" maxWidth="150.0" minWidth="67.0" onKeyPressed="#handleKeyInputInterest" prefHeight="51.0" prefWidth="70.0" promptText="\%interest" />
+                        <Button mnemonicParsing="false" onAction="#interestInfo" text="r">
+                           <VBox.margin>
+                              <Insets left="32.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="time" maxWidth="150.0" minWidth="67.0" prefHeight="51.0" prefWidth="70.0" promptText="Time" />
+                        <Button mnemonicParsing="false" onAction="#timeInfo" text="T">
+                           <VBox.margin>
+                              <Insets left="32.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="dividend" maxWidth="150.0" minWidth="67.0" onKeyPressed="#handleKeyInputDividend" prefHeight="51.0" prefWidth="70.0" promptText="\%Dividend" />
+                        <Button mnemonicParsing="false" onAction="#dividendInfo" text="δ">
+                           <VBox.margin>
+                              <Insets left="32.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="100.0" right="70.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="181.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#calculateCallPrice" prefWidth="181.0" text="Find Call Price" />
+                        <TextField fx:id="callPrice" prefWidth="181.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="178.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#calculatePutPrice" prefWidth="181.0" text="Find Put Price" />
+                        <TextField fx:id="putPrice" prefWidth="181.0" />
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="200.0" />
+               </padding>
+            </HBox>
+            <Button layoutX="278.0" layoutY="227.0" mnemonicParsing="false" onAction="#clearInputs" text="Clear Inputs">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#handleGoToC" text="More Information About Black Scholes" />
+         </children>
+      </VBox>
+      <MenuBar prefWidth="850.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#exitGame" text="Close" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleLoad" text="Load" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleGoToA" text="Return Home" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#aboutMenu" text="About" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

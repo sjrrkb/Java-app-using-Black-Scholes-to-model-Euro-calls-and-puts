@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="SjrrkbOptionCalculator.jnlp">
+  <information>
+    <title>SjrrkbOptionCalculator</title>
+    <vendor>Nick</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="SjrrkbOptionCalculator.jar" size="19595" download="eager" />
+    <jar href="lib\akka-modules-2.1.4.jar" size="11327823" download="eager" />
+    <jar href="lib\heaps-2.0.jar" size="70569" download="eager" />
+    <jar href="lib\joda-time-2.8.2.jar" size="621992" download="eager" />
+    <jar href="lib\kryo-2.22.jar" size="442805" download="eager" />
+    <jar href="lib\suanshu-3.4.0-javadoc.jar" size="11609113" download="eager" />
+    <jar href="lib\suanshu-3.4.0.jar" size="3132670" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="SjrrkbOptionCalculator" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="switcherexample.MenuFail"  name="SjrrkbOptionCalculator" />
+  <update check="always"/>
+</jnlp>
